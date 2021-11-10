@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'medica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'medica',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOTS': 'localhost',
+        'NAME': 'd99c513s7u7684',
+        'USER': 'aqjsupdhmcckbn',
+        'PASSWORD': '8d617ec2d667dd4d817f600bdb27fd7aa86f5b77035c72b6d7136b7e10d5f33f',
+        'HOST': 'ec2-44-193-182-0.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
