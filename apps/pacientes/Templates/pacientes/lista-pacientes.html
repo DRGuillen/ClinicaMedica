@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de Pacientes</title>
+</head>
+<body>
+<h1>Este es un texto de prueba</h1>
+<table border="1">
+	<head>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Teléfono</th>
+		<th>Fecha de Cumpleaños</th>
+	</head>
+	<tbody>
+		{% for paciente in pacientes %}
+			<tr>
+				<td>{{paciente.Nombre}}</td>
+				<td>{{paciente.Apellido}}</td>
+				<td>{{paciente.Teléfono}}</td>
+				<td>{{paciente.Fecha_de_Cumpleaños}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>

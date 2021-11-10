@@ -1,0 +1,75 @@
+<HEAD>
+ <meta content="text/html;" http-equiv="content-type" charset="utf-8">
+</HEAD>
+{% extends "easy_pdf/base.html" %}
+{% block content %}
+<table>
+    <tr>
+        <td>
+            <img src="C:\clinicaMedica\clinica\medica\apps\receta\templates\san_francisco.jpg" width="100" height="200">
+        </td>
+        <td align="center" colspan="3">
+            <font face="Courier New" size=7 color="Black"><strong>Clínica Medica "San Francisco de Asís"</strong></font><br><br>
+            <font face="Courier New" size=6 color="Gray"><strong>Dr. Dick Randolfo Guillén Dardón</strong></font>
+            <font face="Courier New" size=6 color="Gray"><strong><br>Médico y Cirujano</strong></font>
+            <font face="Courier New" size=6 color="Gray"><strong><br>Colegiado 9981</strong></font><br>
+            <font face="Courier New" size=5 color="Gray"><strong><br>15a. Avenida "B" 10-10 Barrio Tamrindal zona 1 Edificio Alfa & Omega Zacapa, Zacapa</strong></font><br><br>
+            <hr>
+        </td>
+    </tr>
+</table>
+<font face="Courier New" size=7 color="Black">
+    <h2 align="center">Datos del Paciente</h2>
+</font>
+<div id="content">
+    <font face="Courier New" size="4">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#000000">
+            <tr>
+                <th align=left> Fecha:</th>
+                <td colspan="3" align=left> {{ consulta.fecha }}</td>
+                <th align=left> Edad:</th>
+                <td align=left>{{ consulta.paciente.edad }}</td>
+                <th align=left> Teléfono:</th>
+                <td align=left>{{ consulta.paciente.telefono }}</td>
+            </tr>
+            <tr>
+                <th align=left> Nombre:</th>
+                <td colspan="3" align=left>{{ consulta.paciente }}</td>
+                <th align=left> Dirección:</th>
+                <td colspan="3" align=left>{{ consulta.paciente.direccion }}</td>
+            </tr>
+        </table>
+    </font>
+
+    <font face="Courier New" size=7 color="Black">
+        <h2 align="center">Consulta Medica No. {{ consulta.id }}</h2>
+    </font>
+<center>
+    <font face="Courier New" size=5 color="Black">
+        <strong><br>SINTOMATOLOGÍA DEL PACIENTE</strong>
+    </font><br>
+    <font face="Courier New" size=5 color="Gray">
+        <strong><br>{{ consulta.sintomatologia }}</strong>
+    </font><br><br><br>
+</center>
+
+    <font face="Courier New" size="5">
+        <table align="center" width="100%" border="0" cellpadding="2" cellspacing="2" bordercolor="#000000">
+            <tr>
+                <th align=center colspan="1">DIAGNÓSTICO</th>
+            </tr>
+            <tr>
+                <td align=center >{{consulta.diagnostico}}</td>
+            </tr>
+        </table>
+    </font>
+</div>
+<br>
+<div id="footer">
+      <center>
+          <hr>
+          <font face="Courier New" size=7 color="Black"><strong>PORQUE NO EXISTEN ENFERMEDADES, SINO ENFERMOS</strong></font><br>
+      </center>
+      <br>
+    </div>
+{% endblock %}

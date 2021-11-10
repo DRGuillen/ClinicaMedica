@@ -1,0 +1,41 @@
+ <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="id_Nombre">Nombre</label>
+        {{ form.Nombre }}
+        {% if form.Nombre.errors %}
+          {% for error in form.Nombre.errors %}
+            <li class="alert-danger">{{error}}</li>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="id_Apellido">Apellido</label>
+        {{ form.Apellido }}
+        {% if form.Apellido.errors %}
+          {% for error in form.Apellido.errors %}
+            <li class="alert-danger">{{error}}</li>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="id_Teléfono">Teléfono</label>
+        {{ form.Teléfono }}
+        {% if form.Teléfono.errors %}
+          {% for error in form.Teléfono.errors %}
+            <li class="alert-danger">{{error}}</li>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        <label for="id_Edad">Edad</label>
+        {{ form.Edad }}
+        {% if form.Edad.errors %}
+          {% for error in form.Edad.errors %}
+            <li class="alert-danger">{{error}}</li>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  

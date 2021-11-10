@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de Pacientes</title>
+</head>
+<body>
+<h1>Este es un texto de prueba</h1>
+<table border="1">
+	<head>
+		<th>Paciente </th>
+		<th>Fecha</th>
+		<th>Motivo</th>
+	</head>
+	<tbody>
+		{% for cita in citas %}
+			<tr>
+				<td>{{cita.paciente}}</td>
+				<td>{{cita.fecha}}</td>
+				<td>{{cita.motivo}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>
+
